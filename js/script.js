@@ -1,71 +1,18 @@
-const controls = document.querySelectorAll(".control");
-let currentItem = 0;
-const items = document.querySelectorAll(".item");
-const maxItems = items.length;
+var divs = [
+  document.getElementById("resposta"),
+  document.getElementById("resposta1"),
+  document.getElementById("resposta2"),
+  document.getElementById("resposta3")
+];
 
-controls.forEach((control) => {
-  control.addEventListener("click", (e) => {
-    isLeft = e.target.classList.contains("arrow-left");
+divs.forEach(x => x.style.display = "none")
 
-    if (isLeft) {
-      currentItem -= 1;
-    } else {
-      currentItem += 1;
+function ativar(posicao){      
+  if (divs[posicao].style.display == "none"){ 
+    divs.forEach(x => x.style.display = "none");
+    divs[posicao].style.display = "block";
+  }
+  else {
+    divs[posicao].style.display = "none";
     }
-
-    if (currentItem >= maxItems) {
-      currentItem = 0;
-    }
-
-    if (currentItem < 0) {
-      currentItem = maxItems - 1;
-    }
-
-    items.forEach((item) => item.classList.remove("current-item"));
-
-    items[currentItem].scrollIntoView({
-      behavior: "smooth",
-      inline: "center" ,
-      block: "nearest"
-    });
-
-    items[currentItem].classList.add("current-item");
-  });
-});
-
-function myFunction() {
-  var x = document.getElementById("resposta");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
   }
-}
-
-function myFunction1() {
-  var x = document.getElementById("resposta1");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-function myFunction2() {
-  var x = document.getElementById("resposta2");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-function myFunction3() {
-  var x = document.getElementById("resposta3");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-

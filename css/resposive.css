@@ -1,13 +1,8 @@
 @media only screen and (max-width: 600px) {
     
     #principal {
-        background: url(/img/capa-2.jpg);  
+        background: url(../img/capa-2.jpg);  
         background-size: cover;
-    }
-
-    #principal .none {
-        display: block;
-        margin-bottom: 0;
     }
 
     #principal .texto {
@@ -17,10 +12,6 @@
     #principal .logo {
         width: 20%;
         margin-bottom: 30%;
-    }
-
-    #principal .none img {
-        width: 100vw;
     }
 
     .ld-esquerdo {
@@ -166,7 +157,6 @@
     }
 
     #answer .pergunta {
-        margin-left: 2%;
         margin-top: 5%;
     }
 
@@ -175,9 +165,15 @@
     }
 
     #answer .ultimo {
-        width: 93%;
+        width: 90%;
     }
 
-    #answer {
+    #answer button {
         border: none;
     }
+
+    #answer button:hover {
+        color: white;
+    }
+
+}
