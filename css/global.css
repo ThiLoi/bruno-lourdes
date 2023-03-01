@@ -13,3 +13,10 @@ body {
     background-color: black;
     color: white;
 }
+
+.bordar {
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 1%;
+    border-bottom: 2px solid #CCC;
+  }
